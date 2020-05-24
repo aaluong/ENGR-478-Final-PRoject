@@ -118,17 +118,16 @@ void Timer0A_Handler(void)
 	//check if sw1 or sw2 has been pressed
 	count--;
 		
-	if(count == 0)
+	if(count == 0){
 		count = 60;
-	
-	else{	char str[3];
 		UARTCharPut(UART0_BASE, 'C');
-    UARTCharPut(UART0_BASE, 'o');
-    UARTCharPut(UART0_BASE, 'u');
-    UARTCharPut(UART0_BASE, 'n');
-    UARTCharPut(UART0_BASE, 't');
-    UARTCharPut(UART0_BASE, ':');}
-
+  		UARTCharPut(UART0_BASE, 'o');
+    		UARTCharPut(UART0_BASE, 'u');
+    		UARTCharPut(UART0_BASE, 'n');
+    		UARTCharPut(UART0_BASE, 't');
+    		UARTCharPut(UART0_BASE, ':');
+	}else{	
+		char str[3];
 		char str[3];
 		sprintf(str, "%d", count);
 		UARTCharPut(UART0_BASE, str[0]); 
@@ -136,7 +135,7 @@ void Timer0A_Handler(void)
 		UARTCharPut(UART0_BASE, str[2]); 
 		UARTCharPut(UART0_BASE, '\n'); 
 		UARTCharPut(UART0_BASE, '\r');
-			
+	}
 }
 
 
