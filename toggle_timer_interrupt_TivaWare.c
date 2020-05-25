@@ -43,8 +43,8 @@ PortFunctionInit(void)
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
 	
 	// PWM PD0, motor 1
-  GPIOPinTypePWM(GPIO_PORTA_BASE, GPIO_PIN_6);
-  GPIOPinConfigure(GPIO_PD0_M1PWM0);
+//  GPIOPinTypePWM(GPIO_PORTA_BASE, GPIO_PIN_6);
+//  GPIOPinConfigure(GPIO_PD0_M1PWM0);
 	
 	// PWM PD0, motor 2
 //GPIOPinTypePWM(GPIO_PORTD_BASE, GPIO_PIN_0);
@@ -259,5 +259,6 @@ int main(void)
 		GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0x00); //Blue light test
 		
 	}
+	
 			}
 	}
